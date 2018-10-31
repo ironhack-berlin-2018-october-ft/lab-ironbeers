@@ -1,0 +1,26 @@
+
+
+
+<div class="beers-container">
+
+ 
+
+
+
+
+    
+  {{#each beers}}
+    <div class="beer-card">
+      <img src={{image_url}}>
+      <h1>{{name}}</h1>
+      <span class="tagline">{{tagline}}</span>
+      <p>{{description}}</p>
+
+    </div>
+  {{/each}}
+
+    {{!-- {{#each beers}}
+    <li>{{this}}</li>
+  {{/each}} --}}
+
+</div>
