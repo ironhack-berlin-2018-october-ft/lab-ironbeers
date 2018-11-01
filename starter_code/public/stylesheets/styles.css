@@ -86,3 +86,8 @@ footer > p {
 .beer-pic > img {
   max-height: 600px;
 }
+#beer-img {
+  width: 400px;
+  height: auto;
+  margin: 35px;
+}
