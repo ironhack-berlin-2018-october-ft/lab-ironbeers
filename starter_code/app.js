@@ -15,6 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res, next) => {
   res.render('index');
 });
+
 app.get('/beers', (req, res, next) => {
   punkAPI.getBeers()
     .then(beers => {
@@ -36,6 +37,15 @@ app.get('/random-beer', (req, res, next) => {
     })
 });
 
+app.get('/beer/:id', (req, res) => {
+  punkAPI.getBeer(req.params.id)
+    .then(beers => {
+      res.render('random-beer', { beers })
+    })
+    .catch(error => {
+      console.log(error)
+    })
+})
 
 
 app.listen(3000);
